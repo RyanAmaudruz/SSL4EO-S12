@@ -240,7 +240,7 @@ def main():
     if args.resume:
         checkpoint = torch.load(args.resume)
         net.load_state_dict(checkpoint['model_state_dict'])
-        optimzier.load_state_dict(checkpoint['optimizer_state_dict'])
+        optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         last_epoch = checkpoint['epoch']
         last_loss = checkpoint['loss']
 
